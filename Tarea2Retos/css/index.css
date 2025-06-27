@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.seccion {
+    background-color: #b674ca;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 240px;
+}
+
+.seccion h1 {
+    padding-top: 80px;
+    font-size: 55px;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+    font-weight: bold;
+}
+
+.fondo  {
+    background-color: #e4e4e4;
+}
+
+
+/* personalizacion opciones menu  */
+
+
+.nav-item a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s ease-in;
+}
+
+.nav-item a:hover {
+    background-color: #b674ca;
+    color: #000;
+}
+
+.navigation-wrap .nav-item {
+    padding: 10px;
+    transition: all 200ms linear; 
+    /*transition permite que exista un delay*/
+}
+
+.navbar-nav {
+    width: 100%;
+    background-color: #e4e4e4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*personalizar menu hamburguesa */
+.navbar-toggler {
+    background-color: #b674ca;
+    border: 3px solid #fff;
+}
+
+.navbar-toggler i {
+    color: #fff;
+    font-size: 30px;
+}
+
+
+.navbar-toggler:hover {
+    background-color: #6d427c;
+}
+
+
+/*activacion*/
+.navbar-toggler:focus {
+    background: red;
+}
+
+/*boton ScrollTop*/
+
+
+
+
+
+
+.seccion1 {
+    background-color: #ffd433;
+}
+
+.seccion1 h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.seccion2 .tituloSeccion2 {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    font-size: 60px;
+}
+
+.seccion2 .icon {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    background-color: #ffd433;
+    width: 110px;
+    font-size: 50px;
+    padding: 25px;
+    color: #fff;
+}
+
+.seccion3 {
+    background-image: url("../img/cenfotec.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 450px;
+    background-attachment: fixed;
+}
+
+.seccion3 h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 100px;
+}
+
+.seccion4 .tituloSeccion4 {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    font-size: 60px;
+}
+
+.seccion4 .card {
+    border: none;
+}
+
+.tituloSeccion5 {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    font-size: 60px;
+}
+
+footer {
+    background-color: #b674ca;
+}
+
+footer p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+
+/* 
+    Dispositivo = Dispositivos con muy baja resolución (Pequeños)
+    Pantalla = 320px to 479px. 
+    Por lo general se usa y se puede observar con la extensión "simulador móvil"
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .navbar-brand img {
+        width: 68px;
+    }
+    .nav-item a {
+        font-size: 17px;
+    }
+    .seccion h1 {
+        font-size: 55px;
+    }
+    .seccion1 h2 {
+        font-size: 27px;
+    }
+    .seccion2 .tituloSeccion2 {
+        font-size: 45px;
+    }
+    .seccion3 h2 {
+        font-size: 45px;
+    }
+    .seccion4 .tituloSeccion4 {
+        font-size: 45px;
+    }
+    .tituloSeccion5 {
+        font-size: 45px;
+    }
+    footer p {
+        font-size: 15px;
+    }
+    .botonScrollTop {
+        background-color: #fddb59;
+        right: 13px;
+    }
+}
+
+
+/* 
+    Dispositivo = Tablets con baja resolución, móviles , móviles (Landscape = orientación horizontal)
+    Pantalla = 481px a 767px. Esta medida se puede observar con el navegador minimizandolo
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .navbar-brand img {
+        width: 90px;
+    }
+    .nav-item a {
+        font-size: 19px;
+    }
+    .seccion h1 {
+        font-size: 75px;
+    }
+    .seccion1 h2 {
+        font-size: 30px;
+    }
+    .seccion2 .tituloSeccion2 {
+        font-size: 50px;
+    }
+    .seccion3 h2 {
+        font-size: 50px;
+    }
+    .seccion4 .tituloSeccion4 {
+        font-size: 50px;
+    }
+    .tituloSeccion5 {
+        font-size: 50px;
+    }
+    footer p {
+        font-size: 18px;
+    }
+    .botonScrollTop {
+        background-color: #fddb59;
+        right: 13px;
+    }
+}
+
+
+/* 
+    Dispositivo = Tablets, Ipads (portrait = verticales)
+    Pantalla = 768px a 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar-brand img {
+        width: 100px;
+    }
+    .nav-item a {
+        font-size: 25px;
+    }
+    .seccion h1 {
+        font-size: 85px;
+    }
+    .seccion1 h2 {
+        font-size: 55px;
+    }
+    .seccion2 .tituloSeccion2 {
+        font-size: 65px;
+    }
+    .seccion3 h2 {
+        font-size: 65px;
+    }
+    .seccion4 .tituloSeccion4 {
+        font-size: 65px;
+    }
+    .tituloSeccion5 {
+        font-size: 65px;
+    }
+    footer p {
+        font-size: 18px;
+    }
+    .botonScrollTop {
+        background-color: #fddb59;
+        right: 13px;
+    }
+}
+
+.botonScrollTop {
+    background-color: #fddb59;
+    right: 13px;
+}
+
+
+/* Espaciado y organización del contenedor de íconos */
+#preguntas .social-icons a {
+    color: white;
+    font-size: 1.5rem; /* Tamaño del icono */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover: color y efecto */
+#preguntas .social-icons a:hover {
+    color: #0d6efd; /* Cambia a azul Bootstrap en hover */
+    transform: scale(1.2);
+}
+
+
+.text-black-icons {
+    color: black;
+    font-size: 1.5rem; /* igual a fs-4 en Bootstrap */
+}
