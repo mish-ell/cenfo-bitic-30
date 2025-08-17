@@ -1,0 +1,517 @@
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Manjari', sans-serif;
+}
+
+/* Variables */
+$titulo1: 2.5rem;
+$titulo2: 2rem;
+$titulo3: 1.5rem;
+$titulo4: 1.3rem;
+$iconos: 5rem;
+$parrafos: 1.2rem;
+
+/*Iconos*/
+$stroke-width: 2px; // default, pero puedes sobrescribir en SVG
+$transition-fast: 0.3s ease-in-out;
+
+/* Paleta de colores */
+$color-principal: #007F7F;       // Verde océano
+$color-secundario: #FFD433;      // Amarillo sol
+$color-tercero: #aaab76;       // Verde océano
+$color-cuarto: #817e75;      // Amarillo sol
+$color-acento: #a74a28;          // Naranja coral
+$color-fondo: #F4F4F4;           // Gris claro para fondo general
+$textoblanco: #FFFFFF;
+$textonegro: #1A1A1A;
+$color-divisor: #f8f9fa; // Color del divisor
+
+/* Imágenes */
+$banner1: url("../img/banner.jpg");
+$banner2: url("../img/banner2.jpg");
+
+/* Fondos */
+$fondopie: $color-secundario;
+$fondosec1: $color-principal;
+
+/* Elimina el scroll horizontal */
+html, body {
+  overflow-x: hidden; // Oculta el desbordamiento horizontal
+  margin: 0; // Asegura que no haya márgenes adicionales
+  padding: 0; // Asegura que no haya padding adicional
+}
+/* Asegura que los elementos no excedan el ancho del viewport */
+* {
+  box-sizing: border-box; // Incluye padding y bordes en el cálculo del ancho/alto
+}
+
+/* Logo */
+.logo-text {
+    font-size: $titulo2; // Tamaño del texto basado en tus variables
+    font-weight: bold;
+    color: $color-principal; // Usa el color principal definido
+    text-transform: uppercase;
+  
+    &:hover {
+      color: $color-acento; // Cambia de color al pasar el cursor
+      text-decoration: none;
+    }
+  }
+
+
+
+/* Estilos generales */
+h1, h2, h3, h4 {
+  color: $color-principal;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: $parrafos;
+  color: $textonegro;
+  line-height: 1.6;
+}
+
+/* Secciones */
+
+
+header {
+  position: fixed; // Fija el header en la parte superior
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%; // Asegura que ocupe todo el ancho de la ventana
+  background-color: rgba($color-principal, 0.9); // Fondo semitransparente
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Agrega una sombra para destacar el header
+  transition: background-color 0.3s ease; // Transición suave para cambios de color
+  z-index: 1000; // Asegura que el header esté por encima de otros contenidos
+  .navbar-brand img {
+    height: auto;
+    width: 120px; // Ajusta el tamaño del logo según sea necesario
+  }
+  nav {
+    padding: 0; // Ajusta el espacio interno del nav
+    margin: 0;
+  }
+
+  .navbar-nav .nav-link {
+    color: $textoblanco; // Color del texto de los enlaces
+    &:hover {
+      color: $color-acento !important; // Cambia el color al pasar el cursor con prioridad
+    }
+  }
+
+  .navigation-wrap .nav-item {
+    padding: 10px;
+    transition: all 200ms linear;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler i {
+    color: $textonegro;
+    font-size: 27px;
+}
+
+.dropdown a:focus {
+  color: $textonegro;
+}
+
+.dropdown-menu {
+  background-color: #cfcfcf;
+  border: none;
+}
+
+}
+
+/* Secciones */
+
+
+  @keyframes colorChange {
+      0% { color:$color-principal; }
+      25% { color: $color-acento; }
+      50% { color: $color-tercero; }
+      75% { color: $color-cuarto; }
+      100% { color: $color-principal; }
+  }
+  .logo-text {
+      animation: colorChange 5s infinite;
+  }
+
+body {
+  padding-top: 70px; // Agrega un espacio superior para evitar que el contenido quede oculto detrás del header
+}
+
+section {
+  padding: 3rem 0;
+
+  &.bg-light {
+    background-color: $color-fondo;
+  }
+
+  h2 {
+    font-size: $titulo2;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+
+/* Clip-Path */
+
+/* Portada */
+.portada6 {
+  background-image: url("../img/banner1.jpg");
+  height: calc(100vh); // Ocupa toda la altura del viewport
+  background-size: cover; // Asegura que la imagen cubra todo el contenedor
+  background-color: aquamarine; // Color de fondo de respaldo
+  clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0); // Crea un diseño de recorte en forma de polígono
+  background-attachment: fixed; // Fija la imagen al hacer scroll
+  background-blend-mode: luminosity; // Mezcla la imagen con el color de fondo
+  box-shadow: inset 0 0 0 1000px rgba(23, 23, 23, 0); // Sombra interna transparente
+}
+
+/* Footer */
+footer {
+  background-color: $fondopie;
+  color: $textoblanco;
+  text-align: center;
+  padding: 1rem 0;
+
+  p {
+    margin: 0;
+    font-size: $titulo4;
+  }
+}
+
+/* Botones */
+button {
+  background-color: $color-acento;
+  color: $textoblanco;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: $titulo4;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-acento, 10%);
+  }
+}
+
+
+/* */
+
+
+
+
+/* Banner */
+#banner {
+    position: relative;
+    width: 100%; // Asegura que el banner ocupe todo el ancho de la ventana
+    height: 100vh; // 100vhOcupa toda la altura de la ventana
+    overflow: hidden;
+
+    #video-banner {
+      position: absolute;
+      width: auto;
+      height: 100vh;; // 100vhOcupa toda la altura de la ventana
+      z-index: -1; // Coloca el video detrás del contenido
+      object-fit: cover; // Asegura que el video cubra todo el contenedor
+
+    }
+  
+    .banner-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: $textoblanco;
+  
+      h1 {
+        font-size: $titulo1;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: $titulo3;
+      }
+    }
+  }
+/* Variables de Imágenes */
+$banner-images: (
+  'pacifico': url('../img/bannerpacific.jpg'),
+  'caribe': url('../img/caribebanner.jpg'),
+  'historia': url('../img/cocles1.jpeg'),
+  'surf': url('../img/cocles1.jpg'),
+  'aventura': url('../img/aventurabanner.jpg'),
+  'relax': url('../img/relaxbanner.jpg')
+);
+
+/* Secciones con diferentes banners */
+@each $name, $image in $banner-images {
+  .banner-#{$name} {
+    background-image: $image;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; // Efecto parallax
+    height: 30vh; // Reduce la altura a la mitad de la ventana
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0; // Simplifica top, left, right, bottom
+      background: rgba(0, 0, 0, 0.5); // Overlay oscuro
+      z-index: -1;
+    }
+  }
+}
+
+/* Redes */
+.social-icons a {
+  transition: transform 0.3s ease, color 0.3s ease; // Transición suave para el hover
+
+  &:hover {
+    transform: scale(1.2); // Aumenta ligeramente el tamaño del ícono
+    color: lighten($color-acento, 50%); // Cambia el color al pasar el cursor (ajusta según tu diseño)
+  }
+}
+/* Responsividad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4 {
+    font-size: $titulo3;
+  }
+
+  p {
+    font-size: $parrafos - 0.2rem;
+  }
+
+  nav a {
+    margin: 0 0.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem; // Reduce el tamaño del texto en pantallas pequeñas
+  }
+  .logo-text {
+    font-size: 1.5rem; // Reduce el tamaño del texto en pantallas pequeñas
+  }
+  .navbar-brand img {
+    width: 100px;
+  } 
+  .iconos {
+    width: $iconos - 1rem; // Reduce el tamaño de los iconos
+    height: $iconos - 1rem;
+  }
+  .icon-equilibrio, .icon-libertad, .icon-sabiduria {
+    width: $iconos - 1rem; // Reduce el tamaño de los iconos
+    height: $iconos - 1rem;
+  }
+  .banner-overlay h1 {
+    font-size: $titulo2; // Reduce el tamaño del título en el banner
+  }
+  .banner-overlay p {
+    font-size: $titulo3; // Reduce el tamaño del párrafo en el banner
+  }
+  .bannerparallax {
+    padding: 50px 0; // Reduce el alto del banner parallax
+  }
+  .bannerparallax::before {
+    background: rgba(0,0,0,0.3); // Reduce la opacidad del overlay oscuro
+  }
+  .bannerparallax h1 {
+    font-size: $titulo3; // Reduce el tamaño del título en el banner parallax
+  }
+  .bannerparallax p {
+    font-size: $titulo4; // Reduce el tamaño del párrafo en el banner parallax
+  }
+}
+
+/*Divisoes*/
+.clip-divider {
+  position: relative;
+  background: $color-principal; // Usa la variable para el color de fondo
+  padding: 100px 0;
+  clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+}
+
+.clip-content {
+  text-align: center;
+  color: $textonegro; // Usa una variable para el color del texto si es necesario
+}
+
+.clip-divider-inverted {
+  position: relative;
+  background: $color-principal; // Usa la variable para el color de fondo
+  padding: 100px 0; // Aumenta el espacio vertical
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%); // Diseño invertido
+}
+
+.clip-content-inverted {
+  text-align: center;
+  color: $textoblanco; // Usa una variable para el color del texto si es necesario
+}
+
+/*Iconos */
+.icon-equilibrio {
+  display: inline-block;
+  vertical-align: middle;
+
+  .open_een {
+    fill: $color-principal;
+    transition: fill $transition-fast;
+  }
+
+  &:hover {
+    .open_een { fill: $color-acento; }
+    transform: scale(1.1);
+    transition: transform $transition-fast;
+  }
+}
+.icon-big {
+  font-size: 3rem; /* o el tamaño que quieras */
+}
+
+
+.icon-libertad {
+  display: inline-block;
+  vertical-align: middle;
+
+  .stroke-line {
+    fill: none;
+    stroke: $color-principal;
+    stroke-width: $stroke-width;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke $transition-fast;
+  }
+
+  &:hover {
+    .stroke-line { stroke: $color-acento; }
+    transform: scale(1.1);
+    transition: transform $transition-fast;
+  }
+}
+
+.icon-sabiduria {
+  display: inline-block;
+  vertical-align: middle;
+
+  .stroke-line {
+    fill: none;
+    stroke: $color-principal;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke $transition-fast;
+  }
+
+  &:hover {
+    .stroke-line { stroke: $color-acento; }
+    transform: scale(1.1);
+    transition: transform $transition-fast;
+  }
+}
+
+/*Catalogos*/
+
+#catalogo-productos {
+  h2 {
+    font-size: $titulo2;
+    color: $color-principal;
+  }
+
+  p {
+    font-size: $parrafos;
+    color: $textonegro;
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-title {
+      font-size: $titulo3;
+      color: $color-principal;
+    }
+
+    .card-text {
+      font-size: $parrafos;
+      color: $textonegro;
+    }
+
+    .btn-primary {
+      background-color: $color-principal;
+      border: none;
+
+      &:hover {
+        background-color: $color-acento;
+      }
+    }
+  }
+}
+/*Linea de Tiempo*/
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-content h4 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.timeline-content:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    background: #007bff;
+    border-radius: 50%;
+}
+
+/*Margenes*/
+
+.margin-2rem {
+  margin: 4rem; // Aplica un margen de 2rem en todos los lados
+}

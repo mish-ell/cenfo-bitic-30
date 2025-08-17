@@ -1,0 +1,526 @@
+@charset "UTF-8";
+/* Tipografía */
+@import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Manjari", sans-serif;
+}
+
+/* Variables */
+/*Iconos*/
+/* Paleta de colores */
+/* Imágenes */
+/* Fondos */
+/* Elimina el scroll horizontal */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegura que los elementos no excedan el ancho del viewport */
+* {
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007F7F;
+  text-transform: uppercase;
+}
+.logo-text:hover {
+  color: #a74a28;
+  text-decoration: none;
+}
+
+/* Estilos generales */
+h1, h2, h3, h4 {
+  color: #007F7F;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #1A1A1A;
+  line-height: 1.6;
+}
+
+/* Secciones */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: rgba(0, 127, 127, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+header .navbar-brand img {
+  height: auto;
+  width: 120px;
+}
+header nav {
+  padding: 0;
+  margin: 0;
+}
+header .navbar-nav .nav-link {
+  color: #FFFFFF;
+}
+header .navbar-nav .nav-link:hover {
+  color: #a74a28 !important;
+}
+header .navigation-wrap .nav-item {
+  padding: 10px;
+  transition: all 200ms linear;
+}
+header .navbar-toggler:focus {
+  box-shadow: none;
+}
+header .navbar-toggler i {
+  color: #1A1A1A;
+  font-size: 27px;
+}
+header .dropdown a:focus {
+  color: #1A1A1A;
+}
+header .dropdown-menu {
+  background-color: #cfcfcf;
+  border: none;
+}
+
+/* Secciones */
+@keyframes colorChange {
+  0% {
+    color: #007F7F;
+  }
+  25% {
+    color: #a74a28;
+  }
+  50% {
+    color: #aaab76;
+  }
+  75% {
+    color: #817e75;
+  }
+  100% {
+    color: #007F7F;
+  }
+}
+.logo-text {
+  animation: colorChange 5s infinite;
+}
+
+body {
+  padding-top: 70px;
+}
+
+section {
+  padding: 3rem 0;
+}
+section.bg-light {
+  background-color: #F4F4F4;
+}
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Clip-Path */
+/* Portada */
+.portada6 {
+  background-image: url("../img/banner1.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-color: aquamarine;
+  clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
+  box-shadow: inset 0 0 0 1000px rgba(23, 23, 23, 0);
+}
+
+/* Footer */
+footer {
+  background-color: #FFD433;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem 0;
+}
+footer p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* Botones */
+button {
+  background-color: #a74a28;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(125.8550724638, 55.768115942, 30.1449275362);
+}
+
+/* */
+/* Banner */
+#banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#banner #video-banner {
+  position: absolute;
+  width: auto;
+  height: 100vh;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#banner .banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFFFFF;
+}
+#banner .banner-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#banner .banner-overlay p {
+  font-size: 1.5rem;
+}
+
+/* Variables de Imágenes */
+/* Secciones con diferentes banners */
+.banner-pacifico {
+  background-image: url("../img/bannerpacific.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30vh;
+  position: relative;
+}
+.banner-pacifico::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.banner-caribe {
+  background-image: url("../img/caribebanner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30vh;
+  position: relative;
+}
+.banner-caribe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.banner-historia {
+  background-image: url("../img/cocles1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30vh;
+  position: relative;
+}
+.banner-historia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.banner-surf {
+  background-image: url("../img/cocles1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30vh;
+  position: relative;
+}
+.banner-surf::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.banner-aventura {
+  background-image: url("../img/aventurabanner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30vh;
+  position: relative;
+}
+.banner-aventura::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.banner-relax {
+  background-image: url("../img/relaxbanner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30vh;
+  position: relative;
+}
+.banner-relax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Redes */
+.social-icons a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: rgb(245.7246376812, 224.1594202899, 216.2753623188);
+}
+
+/* Responsividad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  h1, h2, h3, h4 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  nav a {
+    margin: 0 0.5rem;
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+  }
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  .navbar-brand img {
+    width: 100px;
+  }
+  .iconos {
+    width: 4rem;
+    height: 4rem;
+  }
+  .icon-equilibrio, .icon-libertad, .icon-sabiduria {
+    width: 4rem;
+    height: 4rem;
+  }
+  .banner-overlay h1 {
+    font-size: 2rem;
+  }
+  .banner-overlay p {
+    font-size: 1.5rem;
+  }
+  .bannerparallax {
+    padding: 50px 0;
+  }
+  .bannerparallax::before {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .bannerparallax h1 {
+    font-size: 1.5rem;
+  }
+  .bannerparallax p {
+    font-size: 1.3rem;
+  }
+}
+/*Divisoes*/
+.clip-divider {
+  position: relative;
+  background: #007F7F;
+  padding: 100px 0;
+  clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+}
+
+.clip-content {
+  text-align: center;
+  color: #1A1A1A;
+}
+
+.clip-divider-inverted {
+  position: relative;
+  background: #007F7F;
+  padding: 100px 0;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+}
+
+.clip-content-inverted {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/*Iconos */
+.icon-equilibrio {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-equilibrio .open_een {
+  fill: #007F7F;
+  transition: fill 0.3s ease-in-out;
+}
+.icon-equilibrio:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.icon-equilibrio:hover .open_een {
+  fill: #a74a28;
+}
+
+.icon-big {
+  font-size: 3rem; /* o el tamaño que quieras */
+}
+
+.icon-libertad {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-libertad .stroke-line {
+  fill: none;
+  stroke: #007F7F;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s ease-in-out;
+}
+.icon-libertad:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.icon-libertad:hover .stroke-line {
+  stroke: #a74a28;
+}
+
+.icon-sabiduria {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-sabiduria .stroke-line {
+  fill: none;
+  stroke: #007F7F;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s ease-in-out;
+}
+.icon-sabiduria:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.icon-sabiduria:hover .stroke-line {
+  stroke: #a74a28;
+}
+
+/*Catalogos*/
+#catalogo-productos h2 {
+  font-size: 2rem;
+  color: #007F7F;
+}
+#catalogo-productos p {
+  font-size: 1.2rem;
+  color: #1A1A1A;
+}
+#catalogo-productos .card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#catalogo-productos .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+#catalogo-productos .card .card-title {
+  font-size: 1.5rem;
+  color: #007F7F;
+}
+#catalogo-productos .card .card-text {
+  font-size: 1.2rem;
+  color: #1A1A1A;
+}
+#catalogo-productos .card .btn-primary {
+  background-color: #007F7F;
+  border: none;
+}
+#catalogo-productos .card .btn-primary:hover {
+  background-color: #a74a28;
+}
+
+/*Linea de Tiempo*/
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-content h4 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.timeline-content:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  border-radius: 50%;
+}
+
+/*Margenes*/
+.margin-2rem {
+  margin: 4rem;
+}/*# sourceMappingURL=index2.css.map */
